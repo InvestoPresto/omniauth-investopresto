@@ -11,11 +11,15 @@ describe OmniAuth::Strategies::Investopresto do
     end
 
     it 'should have correct site' do
-      subject.options.client_options.site.should eq('http://login.investopresto.com')
+      subject.client.site.should eq('http://login.investopresto.com')
     end
 
     it 'should have correct authorize url' do
-      subject.options.client_options.authorize_path.should eq('/oauth/authenticate')
+      subject.client.options[:authorize_url].should eq('/oauth/authorize')
+    end
+
+    it 'has correct token url' do
+      subject.client.options[:token_url].should eq('/oauth/token')
     end
   end
 end

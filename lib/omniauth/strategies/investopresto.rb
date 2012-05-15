@@ -7,8 +7,7 @@ module OmniAuth
 
       option :name, 'investopresto'
       option :client_options, {
-        :site => 'http://login.investopresto.com',
-        :authorize_path => '/oauth/authenticate'
+        :site => 'http://login.investopresto.com'
       }
 
       uid { raw_info['id'] }
