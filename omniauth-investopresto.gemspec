@@ -5,9 +5,9 @@ require "omniauth-investopresto/version"
 Gem::Specification.new do |s|
   s.name        = "omniauth-investopresto"
   s.version     = OmniAuth::Investopresto::VERSION
-  s.authors     = ["Arun Agrawal"]
-  s.email       = ["arunagw@gmail.com"]
-  s.homepage    = "https://github.com/arunagw/omniauth-investopresto"
+  s.authors     = ["Sankara Narayanan", "Subhash Chandra"]
+  s.email       = ["sankara.narayanan@investopresto.com", "TMaYaD+github@gmail.com"]
+  s.homepage    = "https://github.com/InvestoPresto/omniauth-investopresto"
   s.summary     = %q{OmniAuth strategy for Investopresto}
   s.description = %q{OmniAuth strategy for Investopresto}
 
@@ -22,5 +22,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '~> 2.7'
   s.add_development_dependency 'rack-test'
   s.add_development_dependency 'simplecov'
-  s.add_development_dependency 'webmock'  
+  s.add_development_dependency 'webmock'
 end
