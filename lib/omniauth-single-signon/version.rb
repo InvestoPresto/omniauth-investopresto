@@ -1,5 +1,5 @@
 module OmniAuth
-  module Investopresto
+  module SingleSignon
     VERSION = "0.0.11"
   end
 end

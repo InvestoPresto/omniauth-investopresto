@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe OmniAuth::Strategies::Investopresto do
+describe OmniAuth::Strategies::SingleSignon do
   subject do
-    OmniAuth::Strategies::Investopresto.new({})
+    OmniAuth::Strategies::SingleSignon.new({})
   end
 
   context "client options" do

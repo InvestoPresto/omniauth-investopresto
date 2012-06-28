@@ -14,12 +14,18 @@ describe OmniAuth::Strategies::Signout do
       subject.options.site.should eq('http://login.investopresto.com')
     end
 
-    pending 'should have correct callback url' do
-      subject.callback_url.should eq('/auth/signout/callback')
-    end
+    context "callback_url" do
+      before(:each) do
+        subject.should_receive(:full_host).and_return('http://example.com')
+        subject.should_receive(:script_name).and_return('')
+      end
+      it 'should have correct callback url' do
+        subject.callback_url.should eq('http://example.com/auth/signout/callback')
+      end
 
-    pending 'has correct single_signout_url' do
-      subject.single_signout_url.should eq 'http://login.investopresto.com/signout?redirect_uri=%2Fauth%2Fsignout%2Fcallback'
+      it 'has correct single_signout_url' do
+        subject.single_signout_url.should eq 'http://login.investopresto.com/signout?redirect_uri=http%3A%2F%2Fexample.com%2Fauth%2Fsignout%2Fcallback'
+      end
     end
   end
 end

@@ -2,7 +2,7 @@ require 'omniauth-oauth2'
 
 module OmniAuth
   module Strategies
-    class Investopresto < OmniAuth::Strategies::OAuth2
+    class SingleSignon < OmniAuth::Strategies::OAuth2
 
 
       option :name, 'investopresto'
